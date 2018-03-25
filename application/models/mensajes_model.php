@@ -22,6 +22,21 @@ class Mensajes_model extends CI_Model {
 	}
 
 
+	public function detalle_mensaje($id_notificacion){
+
+		$this->db->where('id_notificacion',$id_notificacion);
+
+		$this->db->join('personas', 'notificaciones.remitente = personas.id_persona');
+
+		$this->db->select('id_notificacion,codigo_notificacion,categoria_notificacion,remitente,titulo,tipo_notificacion,contenido,destinatario,rol_destinatario,fecha_envio,estado_lectura,personas.nombres,personas.apellido1,personas.apellido2');
+
+		$query = $this->db->get('notificaciones');
+
+		return $query->result();
+		
+	}
+
+
 
 
 }
