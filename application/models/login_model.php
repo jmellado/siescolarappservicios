@@ -26,4 +26,20 @@ class Login_model extends CI_Model {
 		}
 
 	}
+
+
+	//Actualiza El Token De Un Acudiente
+	public function modificar_token($id_persona,$token){
+
+		$usuarios = array('token' => $token);
+
+		$this->db->where('id_persona',$id_persona);
+		$this->db->where('id_rol',4);
+
+		if ($this->db->update('usuarios', $usuarios))
+
+			return true;
+		else
+			return false;
+	}
 }
