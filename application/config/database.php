@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'bd_siescolar';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = 'mysql.hostinger.co';
+$db['default']['username'] = 'u271638835_admin';
+$db['default']['password'] = 'siescolar123';
+$db['default']['database'] = 'u271638835_bd';
+$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = FALSE;
