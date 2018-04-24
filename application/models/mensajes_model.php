@@ -37,6 +37,21 @@ class Mensajes_model extends CI_Model {
 	}
 
 
+	public function actualizar_estado_lectura($id_notificacion){
+
+		$notificaciones = array('estado_lectura' => '1');
+
+		$this->db->where('id_notificacion',$id_notificacion);
+
+		if ($this->db->update('notificaciones', $notificaciones))
+
+			return true;
+		else
+			return false;
+
+	}
+
+
 
 
 }

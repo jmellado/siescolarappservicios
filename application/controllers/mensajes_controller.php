@@ -30,6 +30,7 @@ class Mensajes_controller extends CI_Controller {
 	public function detalle_mensaje(){
 
 		$id_notificacion = $this->input->post('id_notificacion');
+		$respuesta_estado = $this->mensajes_model->actualizar_estado_lectura($id_notificacion);
 		$mensajes = $this->mensajes_model->detalle_mensaje($id_notificacion);
 
 		echo json_encode($mensajes);

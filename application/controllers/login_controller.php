@@ -13,8 +13,8 @@ class Login_controller extends CI_Controller {
 		header("Access-Control-Allow-Headers: Origin, Content-Type");
 
 		//Esto nos permite recuperar los datos del formulario
-		//$res_json = file_get_contents("php://input");
-		//$_POST = json_decode($res_json, true);
+		$res_json = file_get_contents("php://input");
+		$_POST = json_decode($res_json, true);
 	}
 
 
