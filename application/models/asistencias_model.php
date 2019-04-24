@@ -5,7 +5,7 @@ class Asistencias_model extends CI_Model {
 
 	public function buscar_asignatura($id_estudiante){
 
-		$ano_lectivo = $this->notas_model->obtener_anio_actual();
+		$ano_lectivo = $this->asistencias_model->obtener_anio_actual();
 
 		$this->db->where('matriculas.ano_lectivo',$ano_lectivo);
 		$this->db->where('matriculas.id_estudiante',$id_estudiante);
